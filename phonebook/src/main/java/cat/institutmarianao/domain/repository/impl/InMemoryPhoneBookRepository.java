@@ -5,12 +5,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.springframework.stereotype.Repository;
+import javax.ejb.Singleton;
 
 import cat.institutmarianao.domain.PhoneBookEntry;
 import cat.institutmarianao.domain.repository.PhoneBookRepository;
 
-@Repository
+@Singleton
 public class InMemoryPhoneBookRepository implements PhoneBookRepository {
 
 	private final Map<String, PhoneBookEntry> phoneBook = new HashMap<>();
